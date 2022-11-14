@@ -123,11 +123,11 @@ alias gga='git gui citool --amend'
 
 
 alias ggpur='ggu'
-alias ggpull='git pull origin "$(git_current_branch)"'
-alias ggpush='git push origin "$(git_current_branch)"'
+alias ggpull='git pull origin "$(git-branch-current)"'
+alias ggpush='git push origin "$(git-branch-current)"'
 
-alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
-alias gpsup='git push --set-upstream origin $(git_current_branch)'
+alias ggsup='git branch --set-upstream-to=origin/$(git-branch-current)'
+alias gpsup='git push --set-upstream origin $(git-branch-current)'
 
 alias ghh='git help'
 
@@ -184,7 +184,7 @@ alias grbs='git rebase --skip'
 alias grev='git revert'
 alias grh='git reset'
 alias grhh='git reset --hard'
-alias groh='git reset origin/$(git_current_branch) --hard'
+alias groh='git reset origin/$(git-branch-current) --hard'
 alias grm='git rm'
 alias grmc='git rm --cached'
 alias grmv='git remote rename'
@@ -239,7 +239,7 @@ alias gupav='git pull --rebase --autostash -v'
 alias gupom='git pull --rebase origin $(git_main_branch)'
 alias gupomi='git pull --rebase=interactive origin $(git_main_branch)'
 alias glum='git pull upstream $(git_main_branch)'
-alias gluc='git pull upstream $(git_current_branch)'
+alias gluc='git pull upstream $(git-branch-current)'
 
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
